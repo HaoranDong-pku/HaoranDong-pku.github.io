@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>量子霍尔效应 | Physics Study Notes</title><meta name="author" content="Haoran Dong"><meta name="copyright" content="Haoran Dong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="量子霍尔效应量子霍尔效应（Quantum Hall Effect, QHE）是凝聚态物理中的一个重要现象，主要观察于二维电子气体（2DEG）在低温和强磁场下。其核心特征是霍尔电导的量子化，即霍尔电导呈现出离散的量子值。以下将从Landau能级的概念出发，详细推导量子霍尔效应的理论基础。 1. 二维电子气体中的电子运动考虑一个位于$xy$平面内的二维电子气体系统，在垂直于平面的外加均匀磁场$\mat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="量子霍尔效应">
+<meta property="og:url" content="http://example.com/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/index.html">
+<meta property="og:site_name" content="Physics Study Notes">
+<meta property="og:description" content="量子霍尔效应量子霍尔效应（Quantum Hall Effect, QHE）是凝聚态物理中的一个重要现象，主要观察于二维电子气体（2DEG）在低温和强磁场下。其核心特征是霍尔电导的量子化，即霍尔电导呈现出离散的量子值。以下将从Landau能级的概念出发，详细推导量子霍尔效应的理论基础。 1. 二维电子气体中的电子运动考虑一个位于$xy$平面内的二维电子气体系统，在垂直于平面的外加均匀磁场$\mat">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/imgs/125726608_p0_master1200.jpg">
+<meta property="article:published_time" content="2024-12-31T12:04:16.000Z">
+<meta property="article:modified_time" content="2024-12-31T12:06:12.595Z">
+<meta property="article:author" content="Haoran Dong">
+<meta property="article:tag" content="电动力学">
+<meta property="article:tag" content="量子力学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/imgs/125726608_p0_master1200.jpg"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="http://example.com/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '量子霍尔效应',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-31 20:06:12'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css"><meta name="referrer" content="no-referrer-when-downgrade" /><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> Anime</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/imgs/125726608_p0_master1200.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Physics Study Notes"><span class="site-name">Physics Study Notes</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> Anime</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">量子霍尔效应</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-12-31T12:04:16.000Z" title="Created 2024-12-31 20:04:16">2024-12-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-12-31T12:06:12.595Z" title="Updated 2024-12-31 20:06:12">2024-12-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">课程学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="量子霍尔效应"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="量子霍尔效应"><a href="#量子霍尔效应" class="headerlink" title="量子霍尔效应"></a>量子霍尔效应</h1><p>量子霍尔效应（Quantum Hall Effect, QHE）是凝聚态物理中的一个重要现象，主要观察于二维电子气体（2DEG）在低温和强磁场下。其核心特征是霍尔电导的量子化，即霍尔电导呈现出离散的量子值。以下将从Landau能级的概念出发，详细推导量子霍尔效应的理论基础。</p>
+<h3 id="1-二维电子气体中的电子运动"><a href="#1-二维电子气体中的电子运动" class="headerlink" title="1. 二维电子气体中的电子运动"></a>1. <strong>二维电子气体中的电子运动</strong></h3><p>考虑一个位于$xy$平面内的二维电子气体系统，在垂直于平面的外加均匀磁场$\mathbf{B} = B\hat{z}$作用下。电子的哈密顿量为：</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{2m^*} \left( \mathbf{p} + e\mathbf{A} \right)^2</script><p>其中：</p>
+<ul>
+<li>$m^*$为电子的有效质量，</li>
+<li>$ e $为电子的基本电荷，</li>
+<li>$ \mathbf{A} $为矢势，满足$ \nabla \times \mathbf{A} = \mathbf{B} $。</li>
+</ul>
+<p>常用的规范是<strong>规范选择</strong>，例如<strong>Landau规范</strong>：</p>
+<script type="math/tex; mode=display">
+\mathbf{A} = (-By, 0, 0)</script><p>或者<strong>对称规范</strong>：</p>
+<script type="math/tex; mode=display">
+\mathbf{A} = \frac{B}{2}(-y, x, 0)</script><h3 id="2-解薛定谔方程：Landau能级"><a href="#2-解薛定谔方程：Landau能级" class="headerlink" title="2. 解薛定谔方程：Landau能级"></a>2. <strong>解薛定谔方程：Landau能级</strong></h3><p>采用Landau规范，哈密顿量可以写为：</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{2m^*} \left[ \left( p_x - eBy \right)^2 + p_y^2 \right]</script><p>由于哈密顿量在$x$方向上与$x$无关，$p_x$是守恒量，设动量为$p_x = \hbar k_x$​。则哈密顿量可重写为：</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{2m^*} \left[ \left( \hbar k_x - eBy \right)^2 + p_y^2 \right]</script><p>将其展开：</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{2m^*} \left[ \hbar^2 k_x^2 - 2\hbar k_x eBy + e^2 B^2 y^2 + p_y^2 \right]</script><p>引入位移算符：</p>
+<script type="math/tex; mode=display">
+y_0 = \frac{\hbar k_x}{eB}</script><p>则哈密顿量变为：</p>
+<script type="math/tex; mode=display">
+H = \frac{1}{2m^*} \left[ e^2 B^2 \left( y - y_0 \right)^2 + p_y^2 \right] + \frac{\hbar^2 k_x^2}{2m^*} - \frac{\hbar k_x eB y}{m^*}</script><p>可以看出，哈密顿量相当于一个简谐振子的哈密顿量，中心位移为$y_0$​。简谐振子的能级为：</p>
+<script type="math/tex; mode=display">
+E_n = \hbar \omega_c \left( n + \frac{1}{2} \right), \quad n = 0, 1, 2, \ldots</script><p>其中，回旋频率$ \omega_c = \frac{eB}{m^*} $。</p>
+<p>这些能级被称为<strong>Landau能级</strong>，其能量间隔为$ \hbar \omega_c $。</p>
+<h3 id="3-Landau能级的简并性"><a href="#3-Landau能级的简并性" class="headerlink" title="3. Landau能级的简并性"></a>3. <strong>Landau能级的简并性</strong></h3><p>每个Landau能级的简并度与磁通量有关。考虑系统的面积为$ A $​，每个Landau能级的简并度为：</p>
+<script type="math/tex; mode=display">
+N_\phi = \frac{BA}{\Phi_0}</script><p>其中，$\Phi_0 = \frac{h}{e}$是磁通量量子。</p>
+<p>因此，每个Landau能级中可以容纳的电子数为：</p>
+<script type="math/tex; mode=display">
+N = \frac{BA}{\Phi_0} = \frac{eBA}{h}</script><h3 id="4-填充因子和电子填充"><a href="#4-填充因子和电子填充" class="headerlink" title="4. 填充因子和电子填充"></a>4. <strong>填充因子和电子填充</strong></h3><p>填充因子$ \nu $​定义为电子数与简并度的比值：</p>
+<script type="math/tex; mode=display">
+\nu = \frac{N_e}{N_\phi}</script><p>在整数填充因子$ \nu = n $时，系统的Landau能级被整数量子态填满，产生<strong>整数量子霍尔效应（Integer Quantum Hall Effect, IQHE）</strong>。</p>
+<h3 id="5-霍尔电导的量子化"><a href="#5-霍尔电导的量子化" class="headerlink" title="5. 霍尔电导的量子化"></a>5. <strong>霍尔电导的量子化</strong></h3><p>对于存在正交的电场和磁场的体系，带电粒子在其中会发生漂移。我们不妨假设磁场方向为$z$方向，电场方向为$y$方向，则此时的漂移速度为</p>
+<script type="math/tex; mode=display">
+\vec{v}_d=\frac{E}{B}\hat{e}_{x}</script><p>对于某一个特定的Landau能级，设其电子数为$N_e$，则在$x$方向上的电流为</p>
+<script type="math/tex; mode=display">
+I_x=-\frac{N_eev_d}{L_x}=-\frac{N_eeE}{BL_x}=-\frac{N_ee^2EL_y}{eBA}=-\frac{N_ee^2V_y}{hN_\phi}=-\frac{\nu e^2}{h}V_y</script><p>从而我们可以得到电导的$xy$分量</p>
+<script type="math/tex; mode=display">
+\sigma_{xy}=-\nu\frac{e^2}{h}</script><h3 id="6-电导张量的计算"><a href="#6-电导张量的计算" class="headerlink" title="6. 电导张量的计算"></a>6. <strong>电导张量的计算</strong></h3><p>对于二维电子系统，电导张量由霍尔电导$\sigma_{xy}$和纵向电导$\sigma_{xx}$组成。在量子霍尔效应下：</p>
+<ul>
+<li>当填充因子$ \nu $为整数时，$\sigma_{xy}$呈现出量子化的值，$\sigma_{xx}$为零。</li>
+<li>在填充因子之间的过渡区域，$\sigma_{xy}$在两个量子值之间跳变，且$\sigma_{xx}$出现峰值。</li>
+</ul>
+<h3 id="7-边缘态与拓扑性质"><a href="#7-边缘态与拓扑性质" class="headerlink" title="7. 边缘态与拓扑性质"></a>7. <strong>边缘态与拓扑性质</strong></h3><p>在实际样品中，存在边界，使得系统不仅具有体态，还存在边缘态。根据<strong>边缘态理论</strong>（Edge State Theory），每个填满的Landau能级对应一个沿边界传播的边缘态，这些边缘态是无散射的，保证了霍尔电导的量子化。</p>
+<p>边缘态的存在与系统的<strong>拓扑性质</strong>密切相关，具体来说，整数量子霍尔效应属于一种拓扑序，其拓扑不变量为<strong>Chern数</strong>，等于填充因子$ \nu $。</p>
+<h3 id="8-总结"><a href="#8-总结" class="headerlink" title="8. 总结"></a>8. <strong>总结</strong></h3><p>通过上述推导，我们从二维电子气体在强磁场下的Landau能级出发，解释了量子霍尔效应中霍尔电导的量子化现象。关键步骤包括：</p>
+<ol>
+<li><strong>Landau能级的形成</strong>：电子在磁场中运动的量子化导致离散能级。</li>
+<li><strong>简并度和填充因子</strong>：每个Landau能级的简并度与磁场强度和系统面积相关，填充因子决定了电子填充情况。</li>
+<li><strong>霍尔电导的量子化</strong>：整数量子霍尔效应下，霍尔电导以$ \frac{e^2}{h} $为单位量子化。</li>
+<li><strong>边缘态和拓扑保护</strong>：边缘态的无散射传导保证了电导的精确量子化。</li>
+</ol>
+<p>量子霍尔效应不仅丰富了我们对电子在低维系统中行为的理解，也为拓扑物理的发展奠定了基础，尤其是在拓扑绝缘体和拓扑超导体等新型材料的研究中具有重要意义。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">Haoran Dong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/">http://example.com/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/">电动力学</a><a class="post-meta__tags" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><div class="post_share"><div class="social-share" data-image="/imgs/125726608_p0_master1200.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/12/28/%E9%99%88%E5%9F%BA%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86%E8%AE%B2%E4%B9%89/" title="陈基计算物理讲义【批注版】"><img class="cover" src="/imgs/124846309_p0_master1200.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">陈基计算物理讲义【批注版】</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Haoran Dong</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/haorandong-pku"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">I will share some of my notes here, including class notes, research notes, miscellaneous talks, etc</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94"><span class="toc-number">1.</span> <span class="toc-text">量子霍尔效应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8C%E7%BB%B4%E7%94%B5%E5%AD%90%E6%B0%94%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E8%BF%90%E5%8A%A8"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 二维电子气体中的电子运动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A7%A3%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%EF%BC%9ALandau%E8%83%BD%E7%BA%A7"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 解薛定谔方程：Landau能级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Landau%E8%83%BD%E7%BA%A7%E7%9A%84%E7%AE%80%E5%B9%B6%E6%80%A7"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. Landau能级的简并性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%A1%AB%E5%85%85%E5%9B%A0%E5%AD%90%E5%92%8C%E7%94%B5%E5%AD%90%E5%A1%AB%E5%85%85"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 填充因子和电子填充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%9C%8D%E5%B0%94%E7%94%B5%E5%AF%BC%E7%9A%84%E9%87%8F%E5%AD%90%E5%8C%96"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 霍尔电导的量子化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%94%B5%E5%AF%BC%E5%BC%A0%E9%87%8F%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 电导张量的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%BE%B9%E7%BC%98%E6%80%81%E4%B8%8E%E6%8B%93%E6%89%91%E6%80%A7%E8%B4%A8"><span class="toc-number">1.0.7.</span> <span class="toc-text">7. 边缘态与拓扑性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%80%BB%E7%BB%93"><span class="toc-number">1.0.8.</span> <span class="toc-text">8. 总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/" title="量子霍尔效应"><img src="/imgs/125726608_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量子霍尔效应"/></a><div class="content"><a class="title" href="/2024/12/31/%E9%87%8F%E5%AD%90%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/" title="量子霍尔效应">量子霍尔效应</a><time datetime="2024-12-31T12:04:16.000Z" title="Created 2024-12-31 20:04:16">2024-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/28/%E9%99%88%E5%9F%BA%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86%E8%AE%B2%E4%B9%89/" title="陈基计算物理讲义【批注版】"><img src="/imgs/124846309_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="陈基计算物理讲义【批注版】"/></a><div class="content"><a class="title" href="/2024/12/28/%E9%99%88%E5%9F%BA%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86%E8%AE%B2%E4%B9%89/" title="陈基计算物理讲义【批注版】">陈基计算物理讲义【批注版】</a><time datetime="2024-12-28T14:12:30.000Z" title="Created 2024-12-28 22:12:30">2024-12-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part3/" title="Computational Physics (Part3)【未完结】"><img src="/imgs/124748386_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Computational Physics (Part3)【未完结】"/></a><div class="content"><a class="title" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part3/" title="Computational Physics (Part3)【未完结】">Computational Physics (Part3)【未完结】</a><time datetime="2024-12-28T11:19:30.000Z" title="Created 2024-12-28 19:19:30">2024-12-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part2/" title="Computational Physics (Part2)【未完结】"><img src="/imgs/106692919_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Computational Physics (Part2)【未完结】"/></a><div class="content"><a class="title" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part2/" title="Computational Physics (Part2)【未完结】">Computational Physics (Part2)【未完结】</a><time datetime="2024-12-28T11:18:30.000Z" title="Created 2024-12-28 19:18:30">2024-12-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part1/" title="Computational Physics (Part1)"><img src="/imgs/106822333_p0_master1200.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Computational Physics (Part1)"/></a><div class="content"><a class="title" href="/2024/12/28/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86part1/" title="Computational Physics (Part1)">Computational Physics (Part1)</a><time datetime="2024-12-28T07:27:30.000Z" title="Created 2024-12-28 15:27:30">2024-12-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Haoran Dong</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'HaoranDong-pku/HaoranDong-pku.github.io',
+      'data-repo-id': 'R_kgDONjJAjQ',
+      'data-category-id': 'DIC_kwDONjJAjc4CllaZ',
+      'data-mapping': 'pathname',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment= loadGiscus
+  }
+})()</script></div><script async src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/imgs/125336181_p0_master1200.jpg);"> <a class="categoryBar-list-link" href="categories/课程学习笔记/">课程学习笔记</a><span class="categoryBar-list-count">9</span><span class="categoryBar-list-descr">本研笔记</span></li><li class="categoryBar-list-item" style="background:url(/imgs/80906088_p0_master1200.jpg);"> <a class="categoryBar-list-link" href="categories/本研笔记/">本研笔记</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">课程学习笔记</span></li><li class="categoryBar-list-item" style="background:url(/imgs/101373033_p0_master1200.jpg);"> <a class="categoryBar-list-link" href="categories/杂谈/">杂谈</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">杂谈</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
