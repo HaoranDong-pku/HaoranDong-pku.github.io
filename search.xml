@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Casimir效应</title>
+      <link href="/2025/01/01/Casimir%E6%95%88%E5%BA%94/"/>
+      <url>/2025/01/01/Casimir%E6%95%88%E5%BA%94/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Casimir效应"><a href="#Casimir效应" class="headerlink" title="Casimir效应"></a>Casimir效应</h1><p>电磁场的真空能量可以导致一系列有意思的物理现象，但最引人注目的可能是它能够在导电表面之间产生宏观的力。这被称为<strong>卡西米尔效应</strong>，该效应已经已经通过精确测量并与计算结果进行了比较。</p><p>卡西米尔的计算仅依赖于<strong>真空能量</strong>的假设，</p><script type="math/tex; mode=display">E_0=\frac{1}{2} \sum_{\mathbf{k}, \lambda} \hbar \omega_k=\sum_{\mathbf{k}} \hbar \omega_k</script><p>两块大而平行的导体板之间相距 $d$。我们定义一个坐标系，其中 $(x, y)$ 平面与导体板的表面平行，$z$ 方向表示与某一表面垂直的距离。这使得我们可以写出一个势能函数</p><script type="math/tex; mode=display">U(d)=E_0(d)-E_0(\infty)</script><p>这仅给出了有限和无限间隔的板之间真空能量的差异。将 (1) 与 (2) 结合，我们得到</p><script type="math/tex; mode=display">E_0(d)=\hbar \sum_{k_x, k_y, n} \omega_k=\hbar c \sum_{k_x, k_y, n} \sqrt{k_x^2+k_y^2+\left(\frac{n \pi}{d}\right)^2}</script><p>（实际上，这个方程在 $n=0$ 项中缺少一个因子 $1 / 2$。这是因为对于 $n=0$，在 (1) 中只应计数一个极化状态，因为当 $k_z=0$ 时，只有一个纯横向模式。我们将在下面考虑这一点。）现在假设板为正方形，$x$ 和 $y$ 的长度为 $L \gg d$。由于 $L$ 很大，我们可以将对 $k_x$ 和 $k_y$ 的求和替换为积分，写出</p><script type="math/tex; mode=display">E_0(d)=\hbar c\left(\frac{L}{\pi}\right)^2 \int_0^{\infty} d k_x \int_0^{\infty} d k_y \sum_n \sqrt{k_x^2+k_y^2+\left(\frac{n \pi}{d}\right)^2}</script><p>对于极限 $d \rightarrow \infty$，我们也可以将对 $n$ 的求和替换为积分（在实际操作上就是把d提取出来补全离散化求和多出来的系数，注意这里我们并没有改变$d$，这是因为我们实际上只是在$0&lt;z&lt;d$的区间内能量做差，这个区间外的能量在前后并没改变）</p><p>然而，不幸的是，(2) 是两个无限数之间的差异。这个差异可能是有限的，因为对于任何特定的 $d$ 值，具有足够大 $n$ 的项会对不同的 $d$ 值给出相同的结果。也就是说，<strong>(2) 中的两个项应该以相同的方式趋向于无限，这些部分在取差时会相互抵消</strong>。</p><p>这表明我们可以通过将 (4) 中的被积函数乘以一个<strong>截断函数</strong> $f(k)$ 来处理无穷大，其中 $f(k) \rightarrow 1$ 当 $k \rightarrow 0$ 时，且 $f(k) \rightarrow 0$ 当 $k \rightarrow \infty$ 时。这个函数在被积函数变得过大之前“截断”了它，但以相同的方式作用于 (2) 中的两个项，以确保大 $k$ 值的贡献仍然相互抵消。同时，引入极坐标 $\rho=\sqrt{k_x^2+k_y^2}$ 也很有帮助，这样就有 $d k_x d k_y=2 \pi \rho d \rho$。请注意，(4) 中的积分限对应于 $\left(k_x, k_y\right)$ 平面的四分之一区域。然后 (2) 可以写成</p><script type="math/tex; mode=display">\begin{aligned}U(d)=2 \pi \hbar c\left(\frac{L}{\pi}\right)^2 \frac{1}{4} \int_0^{\infty} \rho d \rho[ & \sum_n f\left(\sqrt{\rho^2+\left(\frac{n \pi}{d}\right)^2}\right) \sqrt{\rho^2+\left(\frac{n \pi}{d}\right)^2} \\& \left.-\frac{d}{\pi} \int_0^{\infty} d k_z f\left(\sqrt{\rho^2+k_z^2}\right) \sqrt{\rho^2+k_z^2}\right]\end{aligned}</script><p>现在定义一个函数 $F(\kappa)$ 为</p><script type="math/tex; mode=display">\begin{aligned}F(\kappa) & =\int_0^{\infty} d x f\left(\frac{\pi}{d} \sqrt{x+\kappa^2}\right) \sqrt{x+\kappa^2} \\& =\int_\kappa^{\infty} 2 y^2 f\left(\frac{\pi}{d} y\right) d y\end{aligned}</script><p>将 $\rho^2=(\pi / d)^2 x$ 和 $k_z=(\pi / d) \kappa$ 代入，使得势能可以更简洁地写出，注意$F(0)$前面的$1/2$因子，我们得到</p><script type="math/tex; mode=display">U(d)=\frac{\pi^2 \hbar c}{4 d^3} L^2\left[\frac{1}{2} F(0)+\sum_{n=1}^{\infty} F(n)-\int_0^{\infty} F(\kappa) d \kappa\right]</script><p>因此，我们需要计算积分和求和之间的差异，二者互为合理的近似。实际上，如果一个函数 $F(x)$ 在区间 $0 \leq x \leq N$ 上定义，并在整数点 $x=i$ 处进行求值，则被称为梯形法则的近似方案表示为</p><script type="math/tex; mode=display">\int_0^N F(x) d x \approx \frac{F(0)+F(N)}{2}+\sum_{i=1}^N F(i)</script><p>在我们的情况下，$N \rightarrow \infty$ 且 $F(N) \rightarrow 0$（源自于截断函数 $f(k)$），我们的任务是找到 (8) 左右两边之间的差异。</p><p>幸运的是，有一个定理可以计算这个差异。它被称为<strong>欧拉-麦克劳林求和公式</strong>，可以写成</p><script type="math/tex; mode=display">\frac{F(0)}{2}+\sum_{i=1}^{\infty} F(i)-\int_0^{\infty} F(x) d x=-\frac{1}{12} F^{\prime}(0)+\frac{1}{720} F^{\prime \prime \prime}(0)+\cdots</script><p>这些导数可以使用 (6) 计算。由于 $F(x) \rightarrow 0$ 当 $x \rightarrow \infty$ 时，我们得到</p><script type="math/tex; mode=display">F^{\prime}(y)=-2 y^2 f\left(\frac{\pi}{d} y\right)</script><p>这意味着 $F^{\prime}(0)=0$。如果我们再对截断函数 $f(k)$ 做一个进一步的、但自然的假设，即它的所有导数在 $k \rightarrow 0$ 时都趋向于零，那么我们最终只剩下 (9) 中的三阶导数项。事实上，$F^{\prime \prime \prime}(0)=-4$，因此</p><script type="math/tex; mode=display">U(d)=\frac{\pi^2 \hbar c}{4 d^3} L^2\left[\frac{-4}{720}\right]=-\frac{\pi^2 \hbar c}{720 d^3} L^2</script><p>所以，最终，我们得到卡西米尔力（单位面积）为</p><script type="math/tex; mode=display">\mathscr{F}(d)=\frac{1}{L^2}\left(-\frac{\mathrm{d} U}{\mathrm{d} d}\right)=-\frac{\pi^2 \hbar c}{240 d^4} .</script><p>这就是卡西米尔效应中导体表面间的力的表达式，表现为与间隔 $d$ 的四次方成反比。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 课程学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电动力学 </tag>
+            
+            <tag> 量子力学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>拓扑场论简介</title>
       <link href="/2025/01/01/%E6%8B%93%E6%89%91%E5%9C%BA%E8%AE%BA%E7%AE%80%E4%BB%8B/"/>
       <url>/2025/01/01/%E6%8B%93%E6%89%91%E5%9C%BA%E8%AE%BA%E7%AE%80%E4%BB%8B/</url>
