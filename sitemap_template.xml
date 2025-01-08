@@ -182,13 +182,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -197,6 +190,20 @@
   
   <url>
     <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E9%9A%8F%E6%83%B3/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -217,7 +224,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E9%9A%8F%E6%83%B3/</loc>
+    <loc>http://example.com/tags/AMO/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,13 +232,6 @@
   
   <url>
     <loc>http://example.com/tags/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/AMO/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%9C%AC%E7%A0%94%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
+    <loc>http://example.com/categories/%E6%9C%AC%E7%A0%94%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
