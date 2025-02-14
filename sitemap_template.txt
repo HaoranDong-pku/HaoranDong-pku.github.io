@@ -25,8 +25,8 @@ http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/
 http://example.com/tags/%E9%9A%8F%E6%83%B3/
 http://example.com/tags/AMO/
 http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
-http://example.com/tags/%E6%8B%93%E6%89%91%E5%9C%BA%E8%AE%BA/
 http://example.com/tags/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/
+http://example.com/tags/%E6%8B%93%E6%89%91%E5%9C%BA%E8%AE%BA/
 http://example.com/tags/AI/
 http://example.com/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 http://example.com/categories/%E6%9D%82%E8%B0%88/
