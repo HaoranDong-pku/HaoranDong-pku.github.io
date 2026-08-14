@@ -27,11 +27,11 @@ http://dhrblog.xyz/
 http://dhrblog.xyz/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/
 http://dhrblog.xyz/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/
 http://dhrblog.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/
-http://dhrblog.xyz/tags/MYGO/
-http://dhrblog.xyz/tags/Mujica/
 http://dhrblog.xyz/tags/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/
 http://dhrblog.xyz/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/
 http://dhrblog.xyz/tags/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/
+http://dhrblog.xyz/tags/MYGO/
+http://dhrblog.xyz/tags/Mujica/
 http://dhrblog.xyz/tags/AMO/
 http://dhrblog.xyz/tags/%E9%9A%8F%E6%83%B3/
 http://dhrblog.xyz/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
